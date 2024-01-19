@@ -19,7 +19,7 @@ public class TrenEntidad {
     //relacion de muchos a uno con estacion
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_estacion", referencedColumnName = "id_estacion")
-    private TrenEntidad id_estacion;
+    private EstacionEntidad id_estacion;
 
     //relacion de one a muchos con horario
     @OneToMany(mappedBy = "id_horario", cascade = CascadeType.ALL)
