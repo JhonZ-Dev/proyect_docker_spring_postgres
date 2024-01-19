@@ -25,7 +25,7 @@ public class EstacionEntidad {
     //relacion de uno a muchos con tren
     @OneToMany(mappedBy = "id_tren", cascade = CascadeType.ALL)
     private List<TrenEntidad> trenEntidads;
-    
+
 
 
 }
