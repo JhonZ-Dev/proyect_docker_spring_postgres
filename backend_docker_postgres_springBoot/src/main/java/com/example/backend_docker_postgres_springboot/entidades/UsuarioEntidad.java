@@ -9,5 +9,9 @@ import lombok.Data;
 public class UsuarioEntidad {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id_usuario;
+    private String nombre_usuario;
+    private String contrasenia_usuario;
+    private String rol_usuario;
 
 }
