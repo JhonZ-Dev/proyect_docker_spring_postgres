@@ -25,4 +25,15 @@ public class HorarioEntidad {
     //relacion de uno a muchos con reservabilletes
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "id_horario")
     private List<ReservaEntidad> reservaEntidads;
+
+    //relacion de muchos a uno con ruta
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_ruta", referencedColumnName = "id_ruta")
+    private RutaEntidad id_ruta;
+
+    //relacion de muchos a uno con tren
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_tres", referencedColumnName = "id_tren")
+    private TrenEntidad id_tren;
+
 }
