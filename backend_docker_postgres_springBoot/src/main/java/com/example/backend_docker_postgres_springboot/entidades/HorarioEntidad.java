@@ -6,6 +6,7 @@ import lombok.Data;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.List;
 
 @Entity
 @Table(name = "tbl_horarios")
@@ -20,4 +21,8 @@ public class HorarioEntidad {
     private LocalTime hora_salida;
     @JsonFormat(pattern = "HH:mm:ss")
     private LocalTime hora_llegada;
+
+    //relacion de uno a muchos con reservabilletes
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "id_horario")
+    private List<ReservaEntidad> reservaEntidads;
 }
