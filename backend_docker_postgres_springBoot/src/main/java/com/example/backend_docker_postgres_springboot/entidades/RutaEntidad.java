@@ -8,6 +8,7 @@ public class RutaEntidad {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id_ruta;
-
+    private String descripcion;
+    private String duracion_estimada;
 
 }
