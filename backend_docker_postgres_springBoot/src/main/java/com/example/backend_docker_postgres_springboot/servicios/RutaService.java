@@ -47,7 +47,7 @@ public class RutaService {
     }
 
     //obtener por id
-    Optional<RutaEntidad>traerPorId(Long id_ruta){
+    public Optional<RutaEntidad>traerPorId(Long id_ruta){
         return repositorio.findById(id_ruta);
     }
 
