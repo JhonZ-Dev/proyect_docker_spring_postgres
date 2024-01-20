@@ -56,4 +56,9 @@ public class EstacionController {
         return service.encontrarPorId(id_estacion);
     }
 
+    @DeleteMapping("/eliminar/{id_estacion}")
+    public void eliminar(@PathVariable Long id_estacion){
+        service.elimina(id_estacion);
+    }
+
 }
