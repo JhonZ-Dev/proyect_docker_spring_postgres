@@ -45,4 +45,9 @@ public class EstacionService {
         repositorio.deleteById(id_estacion);
     }
 
+    public EstacionEntidad buscarPorId(Long id_estacion){
+        EstacionEntidad estacion = this.repositorio.findById(id_estacion).orElse(null);
+        return estacion;
+    }
+
 }
