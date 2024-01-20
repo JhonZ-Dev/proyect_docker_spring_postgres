@@ -22,9 +22,9 @@ public class ReservaService {
     public HorarioRepositorio hora_repo;
 
     //metodo para guardar un repositorio con su usuario
-    public ReservaEntidad guardarConUsuario(ReservaEntidad reserva,
-                                            Long id_usuario,
-                                            Long id_horario){
+    public ReservaEntidad guardarConUsuarioyHorario(ReservaEntidad reserva,
+                                                    Long id_usuario,
+                                                    Long id_horario){
         //obtener el usuario por su ID
         Optional<UsuarioEntidad> usuarioEntidadOptional = user_repo.findById(id_usuario);
         Optional<HorarioEntidad> horarioEntidadOptional = hora_repo.findById(id_horario);
